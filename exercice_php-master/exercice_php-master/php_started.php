@@ -21,49 +21,24 @@
                 <caption>Le top 10 des langages</caption>
                 <thead>
                     <tr>
-                        <th role="columnheader">Classement</th>
+                        <th>Classement</th>
                         <th>Langage</th>
                         <th>Type</th>
                     </tr>
                 </thead>
                 <tbody>
-            
+                   
             <?php
-            /*   $python = array (
-                 'classement' => '1',
-                 'langage' => 'Python',
-                 'type' => 'Web application'
-               );
-
-               print_r($python);
-        
-              $cplus = array (
-                 'classement' => '2',
-                 'langage' => 'C++',
-                 'type' => 'Application'
-               );
-       
-               print_r($cplus);
-
-              $nodejs = array (
-                 'classement' => '3',
-                 'langage' => 'Node js',
-                 'type' => 'Web application'
-               );
-
-              $php = array(
-                 'classement' => '4',
-                 'langage' => 'Php',
-                 'type' => 'Web application'
-               ); */
-
+           
                $table = array(
                 1 => array("classement"=>"1",
                         "langage"=>"Python",
                         "type" => "Web application"),
+
                 2 => array("classement"=>"2",
                         "langage"=>"C++",
                         "type" => "Application"),
+
                 3 => array("classement"=>"3",
                         "langage"=>"Node js",
                         "type" => "Web application"),
@@ -72,26 +47,18 @@
                         "langage"=>"Php",
                         "type" => "Web application"),        
             );
+                
 
-            print_r($table[1]).'<br>';
-            print_r($table[2]).'<br>';
-            print_r($table[3]).'<br>';
-            print_r($table[4]).'<br>';
-
-            foreach($table as $value){
-                print_r("<td>".$value."</td>");
+            foreach($table as $key => $index){
+         //       print $key;
+                print"<tr>";
+                foreach ($index as $key_1 => $value){
+                    echo "<td>".$value."</td>\n";
                 }
+                print"</tr>";
+            }
 
-            print "</tr>";
-
-    /*        for($i=0; $i = $table; $i++){
-               if($table[1]< $table[2]){
-                   print_r($table[1]."<tr>");
-                break;
-                }
-            }  */
-          
-            ?>
+          ?>
                 </tbody>
                 <tfoot>
                         <tr>
