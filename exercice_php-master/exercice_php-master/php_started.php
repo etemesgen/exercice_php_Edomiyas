@@ -27,26 +27,71 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Python</td>
-                        <td>Web &amp; application</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>C++</td>
-                        <td>Application</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Node js</td>
-                        <td>Web &amp; application</td>
-                    </tr>
-                    <tr>
-                            <td>4</td>
-                            <td>Php</td>
-                            <td>Web &amp; application</td>
-                        </tr>
+            
+            <?php
+            /*   $python = array (
+                 'classement' => '1',
+                 'langage' => 'Python',
+                 'type' => 'Web application'
+               );
+
+               print_r($python);
+        
+              $cplus = array (
+                 'classement' => '2',
+                 'langage' => 'C++',
+                 'type' => 'Application'
+               );
+       
+               print_r($cplus);
+
+              $nodejs = array (
+                 'classement' => '3',
+                 'langage' => 'Node js',
+                 'type' => 'Web application'
+               );
+
+              $php = array(
+                 'classement' => '4',
+                 'langage' => 'Php',
+                 'type' => 'Web application'
+               ); */
+
+               $table = array(
+                1 => array("classement"=>"1",
+                        "langage"=>"Python",
+                        "type" => "Web application"),
+                2 => array("classement"=>"2",
+                        "langage"=>"C++",
+                        "type" => "Application"),
+                3 => array("classement"=>"3",
+                        "langage"=>"Node js",
+                        "type" => "Web application"),
+
+                4 => array("classement"=>"4",
+                        "langage"=>"Php",
+                        "type" => "Web application"),        
+            );
+
+            print_r($table[1]).'<br>';
+            print_r($table[2]).'<br>';
+            print_r($table[3]).'<br>';
+            print_r($table[4]).'<br>';
+
+            foreach($table as $value){
+                print_r("<td>".$value."</td>");
+                }
+
+            print "</tr>";
+
+    /*        for($i=0; $i = $table; $i++){
+               if($table[1]< $table[2]){
+                   print_r($table[1]."<tr>");
+                break;
+                }
+            }  */
+          
+            ?>
                 </tbody>
                 <tfoot>
                         <tr>
@@ -56,17 +101,6 @@
                         </tr>
                 </tfoot>
             </table>
-
-            <?php
-               $python = array (
-                    'classement' => '1',
-                    'langage' => 'Python',
-                    'type' => 'Web application'
-                );
-
-                print-r($python);
-            ?> 
-
         </div>
         <footer>
             <p>&copy; - Giusmili <?php print date('Y') ?></p>
@@ -74,3 +108,4 @@
     </main>
 </body>
 </html>
+
